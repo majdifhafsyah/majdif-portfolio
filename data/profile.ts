@@ -119,5 +119,15 @@ export const certificates = [
     credentialUrl: "https://www.coursera.org/account/accomplishments/verify/QSNSWA1YXC9T",
     credentialId: "QSNSWA1YXC9T",
     image: "/images/certificate-foundations-coding-fullstack.webp"
+  },
+  {
+    title: "Intermediate of Android App",
+    issuer: "Dicoding Indonesia",
+    date: "Dec 2023",
+    description:
+      "complete application development learning at the intermediate level.",
+    credentialUrl: "https://www.dicoding.com/certificates/1OP8NL37QXQK",
+    credentialId: "1OP8NL37QXQK",
+    image: "/images/interm_android_certif.webp"
   }
 ];
