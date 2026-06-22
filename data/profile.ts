@@ -39,7 +39,7 @@ export const skillItems = [
   { name: "C#", icon: "C#", description: "Structured coding" },
   { name: "REST API", icon: "API", description: "System integration" },
   { name: "MySQL", icon: "SQL", description: "Database design" },
-  { name: "Admin Dashboard", icon: "UI", description: "Business interface" },
+  { name: "Jetpack Compose", icon: "UI", description: "End-to-end Apps" },
   { name: "Full Stack", icon: "FS", description: "End-to-end apps" },
   { name: "Git", icon: "Git", description: "Version control" },
   { name: "Tailwind CSS", icon: "TW", description: "Clean styling" },
@@ -80,19 +80,19 @@ export const experiences = [
     technologies: ["Laravel", "PHP", "MySQL", "REST API", "Dashboard", "Git"]
   },
   {
-    role: "Full Stack Project Developer",
-    company: "SIMAMIN - School Management System",
-    period: "2025 - Present",
-    location: "Lombok Timur, Indonesia",
+    role: "Mobile Development Cohort",
+    company: "Bangkit led by Google, Goto and Traveloka",
+    period: "Aug 2023 - Jan 2024",
+    location: "Remote",
     description:
-      "Developing a school management application that supports administrative activities and improves data management for schools.",
+      "Led a livestock skin disease detection application project as a Project Manager, managing project planning, team coordination, task distribution, and project delivery",
     highlights: [
-      "Created modules for student data, teacher data, class management, academic year, semester, attendance, and extracurricular activities.",
-      "Implemented admin and teacher dashboards to make school data easier to manage and monitor.",
-      "Built reporting features for attendance recaps and school administration needs.",
-      "Prepared the project as a portfolio-ready full stack application with public preview and source code reference."
+      "Designed and developed the application interface and implemented core features for the livestock disease detection application from development to deployment stages.",
+      "Applied modern Android development architecture and technologies such as Kotlin, Jetpack Compose, MVVM.",
+      "Developed multiple Android applications including task management (To-Do List) applications and other mobile-based projects to strengthen software engineering and problem-solving skills.",
+      "Designed and developed the application interface and implemented core features for the livestock disease detection application from development to deployment stages."
     ],
-    technologies: ["Laravel", "Livewire", "Tailwind CSS", "MySQL", "Admin Dashboard"]
+    technologies: ["Kotlin", "Jetpack Compose", "Firebase", "MVVM", "Rest API"]
   }
 ];
 
