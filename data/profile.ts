@@ -87,7 +87,7 @@ export const experiences = [
     description:
       "Led a livestock skin disease detection application project as a Project Manager, managing project planning, team coordination, task distribution, and project delivery",
     highlights: [
-      "Designed and developed the application interface and implemented core features for the livestock disease detection application from development to deployment stages.",
+      "Completed an intensive mobile development program focused on Android application development using Kotlin and modern Android development practices.",
       "Applied modern Android development architecture and technologies such as Kotlin, Jetpack Compose, MVVM.",
       "Developed multiple Android applications including task management (To-Do List) applications and other mobile-based projects to strengthen software engineering and problem-solving skills.",
       "Designed and developed the application interface and implemented core features for the livestock disease detection application from development to deployment stages."
