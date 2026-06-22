@@ -760,238 +760,26 @@ main { position: relative; }
   .animateIn, .animateInOnScroll { opacity: 1; transform: none; }
 }
 
-/* --- Portfolio refinements: experience, horizontal projects, certificate gallery --- */
-.experienceStack {
-  display: grid;
-  gap: 22px;
-}
-.experienceCard {
-  border-radius: 34px;
-  padding: 30px;
-}
-.experienceHead {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 24px;
-  margin-bottom: 22px;
-}
-.experienceCompany {
-  margin: 4px 0 0;
-  color: #6f5df6 !important;
-  font-weight: 800;
-}
-.experienceMeta {
-  display: grid;
-  gap: 10px;
-  color: var(--muted);
-  font-weight: 700;
-  text-align: right;
-  white-space: nowrap;
-}
-.experienceBody {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px 28px;
-  padding: 26px 0 18px;
-  border-top: 1px solid rgba(23, 32, 51, 0.08);
-  border-bottom: 1px solid rgba(23, 32, 51, 0.08);
-}
-.experiencePoint {
-  position: relative;
-  padding-left: 18px;
-  margin: 0;
-}
-.experiencePoint::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 11px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--blue);
-  box-shadow: 0 0 0 6px rgba(58, 130, 247, 0.10);
-}
-.experienceTech {
-  padding-top: 18px;
-}
-.experienceTechTitle {
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 13px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.projectRailWrap {
-  position: relative;
-  margin-top: 10px;
-}
-.projectRail {
-  display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  padding: 6px 4px 18px;
-  scroll-snap-type: x proximity;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(15, 107, 70, 0.4) transparent;
-}
-.projectRail::-webkit-scrollbar {
-  height: 10px;
-}
-.projectRail::-webkit-scrollbar-thumb {
-  background: rgba(15, 107, 70, 0.28);
-  border-radius: 999px;
-}
-.projectRailCard {
-  flex: 0 0 min(390px, calc(100vw - 48px));
-  display: grid;
-  gap: 0;
-  scroll-snap-align: start;
-  border-radius: 30px;
-  border: 1px solid rgba(23, 32, 51, 0.11);
-  background: var(--card);
-  box-shadow: 0 18px 48px rgba(24, 37, 62, 0.10);
-  backdrop-filter: blur(12px);
-  overflow: hidden;
-  transition: transform 220ms ease, box-shadow 220ms ease;
-}
-.projectRailCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 72px rgba(24, 37, 62, 0.16);
-}
-.projectRailImage {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border-bottom: 1px solid rgba(23, 32, 51, 0.08);
-  background: #111827;
-}
-.projectRailImage img {
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  transition: transform 300ms ease;
-}
-.projectRailImage:hover img { transform: scale(1.035); }
-.projectRailContent {
-  padding: 22px 22px 24px;
-}
-.projectRailContent h3 {
-  font-size: 26px;
-}
-
-.certificatesShowcase {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
-  align-items: start;
-}
-.certificateTile {
-  display: grid;
-  gap: 12px;
-  transition: transform 260ms ease, filter 260ms ease, opacity 260ms ease;
-}
-.certificateThumb {
-  overflow: hidden;
-  border-radius: 22px;
-  border: 1px solid rgba(23, 32, 51, 0.11);
-  background: white;
-  box-shadow: 0 18px 48px rgba(24, 37, 62, 0.10);
-}
-.certificateThumb img {
-  aspect-ratio: 991 / 765;
-  object-fit: cover;
-  transition: transform 280ms ease;
-}
-.certificateCaption {
-  display: grid;
-  gap: 4px;
-  padding: 0 2px;
-}
-.certificateCaption strong {
-  font-size: 16px;
-  letter-spacing: -0.02em;
-}
-.certificateCaption span {
-  color: var(--muted);
-  font-size: 14px;
-  font-weight: 700;
-}
-.certificatesShowcase:hover .certificateTile {
-  filter: blur(3px) saturate(0.72);
-  opacity: 0.58;
-}
-.certificatesShowcase:hover .certificateTile:hover {
-  filter: blur(0) saturate(1);
-  opacity: 1;
-  transform: translateY(-8px) scale(1.02);
-}
-.certificatesShowcase:hover .certificateTile:hover .certificateThumb img {
-  transform: scale(1.02);
-}
-
-@media (max-width: 960px) {
-  .experienceHead {
-    flex-direction: column;
-  }
-  .experienceMeta {
-    text-align: left;
-  }
-  .experienceBody {
-    grid-template-columns: 1fr;
-  }
-  .certificatesShowcase {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  .experienceCard {
-    padding: 20px;
-    border-radius: 28px;
-  }
-  .experienceHead {
-    gap: 14px;
-    margin-bottom: 18px;
-  }
-  .experienceBody {
-    gap: 14px;
-    padding: 18px 0 14px;
-  }
-  .projectRail {
-    margin-inline: -4px;
-    padding-bottom: 14px;
-  }
-  .projectRailCard {
-    flex-basis: calc(100vw - 32px);
-    border-radius: 26px;
-  }
-  .projectRailContent {
-    padding: 18px;
-  }
-  .certificatesShowcase {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .certificatesShowcase:hover .certificateTile {
-    filter: none;
-    opacity: 1;
-  }
-}
-
-/* Updated sections: experience, horizontal projects, and interactive certificate gallery */
-.centeredHeading .sectionHeading {
+/* --- Clean sections: experience, horizontal projects, and certificate gallery --- */
+.centeredHeading .sectionHeading,
+.projectSection .sectionHeading,
+.certificateSection .sectionHeading {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 }
-.experienceSection { position: relative; }
+
+.experienceSection,
+.projectSection,
+.certificateSection {
+  position: relative;
+}
+
 .experienceList {
   display: grid;
   gap: 24px;
 }
+
 .experienceCard {
   position: relative;
   overflow: hidden;
@@ -1005,11 +793,13 @@ main { position: relative; }
   backdrop-filter: blur(12px);
   transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
+
 .experienceCard:hover {
   transform: translateY(-6px);
   border-color: rgba(15, 107, 70, 0.2);
   box-shadow: 0 30px 80px rgba(24, 37, 62, 0.16);
 }
+
 .experienceCard::before {
   content: "";
   position: absolute;
@@ -1020,6 +810,7 @@ main { position: relative; }
   background: linear-gradient(180deg, var(--green), rgba(216, 164, 71, 0.35), transparent);
   opacity: 0.28;
 }
+
 .experienceHeader {
   position: relative;
   display: grid;
@@ -1028,6 +819,7 @@ main { position: relative; }
   align-items: start;
   margin-bottom: 22px;
 }
+
 .experienceIcon {
   display: grid;
   place-items: center;
@@ -1040,6 +832,7 @@ main { position: relative; }
   font-weight: 900;
   box-shadow: 0 12px 30px rgba(24, 37, 62, 0.08);
 }
+
 .companyName {
   margin: 0;
   color: var(--green) !important;
@@ -1047,6 +840,7 @@ main { position: relative; }
   font-weight: 900;
   line-height: 1.3 !important;
 }
+
 .experienceMeta {
   display: grid;
   gap: 8px;
@@ -1056,12 +850,14 @@ main { position: relative; }
   font-weight: 800;
   white-space: nowrap;
 }
+
 .experienceDescription {
   position: relative;
   max-width: 880px;
   color: var(--muted);
   line-height: 1.75;
 }
+
 .experienceHighlights {
   position: relative;
   display: grid;
@@ -1069,6 +865,7 @@ main { position: relative; }
   gap: 14px 28px;
   margin-top: 24px;
 }
+
 .experienceHighlights p {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -1077,16 +874,19 @@ main { position: relative; }
   color: #526071;
   line-height: 1.7;
 }
+
 .experienceHighlights span {
   color: var(--blue);
   font-size: 25px;
   line-height: 1;
 }
+
 .experienceTech {
   margin-top: 28px;
   padding-top: 20px;
   border-top: 1px solid rgba(23, 32, 51, 0.08);
 }
+
 .techLabel {
   margin-bottom: 12px;
   color: #6b7482;
@@ -1096,246 +896,99 @@ main { position: relative; }
   font-weight: 900;
 }
 
-.projectSection { overflow: visible; }
+/* Project cards stay centered when only one item exists and scroll horizontally when there are multiple projects. */
+.projectSection {
+  overflow: visible;
+  text-align: center;
+}
+
 .projectScroller {
   display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 8px 4px 26px;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: 4px;
-  scrollbar-width: thin;
-}
-.projectScroller::-webkit-scrollbar { height: 10px; }
-.projectScroller::-webkit-scrollbar-track {
-  border-radius: 999px;
-  background: rgba(23, 32, 51, 0.07);
-}
-.projectScroller::-webkit-scrollbar-thumb {
-  border-radius: 999px;
-  background: rgba(15, 107, 70, 0.34);
-}
-.projectScroller .projectCard {
-  flex: 0 0 min(440px, 86vw);
-  scroll-snap-align: start;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: start;
-  gap: 0;
-  padding: 18px;
-  border-radius: 34px;
-}
-.projectScroller .projectCard:hover {
-  transform: translateY(-7px) rotate(-0.4deg);
-}
-.projectScroller .projectImage {
-  border-radius: 25px;
-}
-.projectScroller .projectImage img {
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-}
-.projectScroller .projectContent {
-  padding: 22px 8px 8px;
-}
-.projectScroller .projectContent h3 {
-  margin-bottom: 6px;
-}
-.projectScroller .projectStats {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.certificateSection { overflow: visible; }
-.certificateGrid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
-  align-items: stretch;
-  margin-top: 32px;
-}
-.certificateTile {
-  position: relative;
-  display: grid;
-  gap: 16px;
-  border: 1px solid rgba(23, 32, 51, 0.1);
-  border-radius: 30px;
-  padding: 14px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 18px 48px rgba(24, 37, 62, 0.1);
-  backdrop-filter: blur(12px);
-  transition: transform 260ms ease, filter 260ms ease, opacity 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
-}
-.certificateGrid:hover .certificateTile {
-  filter: blur(3.5px) grayscale(0.2);
-  opacity: 0.46;
-  transform: scale(0.98);
-}
-.certificateGrid .certificateTile:hover {
-  z-index: 4;
-  filter: none;
-  opacity: 1;
-  transform: translateY(-10px) scale(1.035);
-  border-color: rgba(15, 107, 70, 0.24);
-  box-shadow: 0 34px 90px rgba(24, 37, 62, 0.2);
-}
-.certificateThumb {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border: 1px solid rgba(23, 32, 51, 0.12);
-  border-radius: 22px;
-  background: #fff;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
-}
-.certificateThumb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.22) 48%, transparent 70%);
-  transform: translateX(-120%);
-  transition: transform 650ms ease;
-}
-.certificateTile:hover .certificateThumb::after { transform: translateX(120%); }
-.certificateThumb img {
-  aspect-ratio: 4 / 3;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 360ms ease;
-}
-.certificateTile:hover .certificateThumb img { transform: scale(1.04); }
-.certificateInfo {
-  padding: 4px 6px 8px;
-}
-.certificateInfo h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-.certificateInfo p {
-  color: var(--muted);
-  line-height: 1.65;
-}
-.certificateInfo .eyebrow {
-  color: var(--green);
-  margin-bottom: 9px;
-}
-
-@media (max-width: 960px) {
-  .experienceHeader {
-    grid-template-columns: auto 1fr;
-  }
-  .experienceMeta {
-    grid-column: 2;
-    justify-items: start;
-    white-space: normal;
-  }
-  .experienceHighlights {
-    grid-template-columns: 1fr;
-  }
-  .certificateGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 640px) {
-  html { scroll-padding-top: 96px; }
-  .sectionShell { scroll-margin-top: 96px; }
-  .experienceCard {
-    padding: 22px;
-    border-radius: 28px;
-  }
-  .experienceCard::before {
-    left: 45px;
-    top: 26px;
-    bottom: 26px;
-  }
-  .experienceHeader {
-    gap: 14px;
-  }
-  .experienceIcon {
-    width: 44px;
-    height: 44px;
-    border-radius: 16px;
-  }
-  .experienceHighlights {
-    gap: 12px;
-  }
-  .projectScroller {
-    margin-inline: -12px;
-    padding-left: 12px;
-    padding-right: 12px;
-  }
-  .projectScroller .projectCard {
-    flex-basis: 88vw;
-    padding: 14px;
-  }
-  .projectScroller .projectStats {
-    grid-template-columns: 1fr;
-  }
-  .certificateGrid {
-    grid-template-columns: 1fr;
-  }
-  .certificateGrid:hover .certificateTile {
-    filter: none;
-    opacity: 1;
-    transform: none;
-  }
-  .certificateGrid .certificateTile:hover {
-    transform: translateY(-6px) scale(1.01);
-  }
-}
-
-/* --- Final layout tuning: centered projects/certificates and side-scrolling projects --- */
-.projectSection,
-.certificateSection {
-  text-align: center;
-}
-
-.projectSection .sectionHeading,
-.certificateSection .sectionHeading {
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-.projectScroller {
   width: 100%;
   max-width: 1120px;
   margin: 0 auto;
-  gap: 24px;
-  padding: 12px 8px 34px;
   overflow-x: auto;
   overflow-y: hidden;
+  padding: 12px 8px 34px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overscroll-behavior-inline: contain;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 107, 70, 0.34) rgba(23, 32, 51, 0.07);
 }
 
 .projectScroller:has(.projectCard:only-child) {
   justify-content: center;
 }
 
+.projectScroller::-webkit-scrollbar {
+  height: 10px;
+}
+
+.projectScroller::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgba(23, 32, 51, 0.07);
+}
+
+.projectScroller::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(15, 107, 70, 0.34);
+}
+
 .projectScroller .projectCard {
+  flex: 0 0 clamp(320px, 74vw, 430px);
   width: clamp(320px, 74vw, 430px);
   max-width: 430px;
   min-width: clamp(320px, 74vw, 430px);
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: start;
+  gap: 0;
+  padding: 18px;
+  border-radius: 34px;
   text-align: left;
+  scroll-snap-align: start;
 }
 
-.projectScroller .projectImage,
+.projectScroller .projectCard:hover {
+  transform: translateY(-7px) rotate(-0.4deg);
+}
+
+.projectScroller .projectImage {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.projectScroller .projectImage img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
 .projectScroller .projectContent {
   width: 100%;
+  padding: 22px 8px 8px;
+  text-align: left;
 }
 
-.projectScroller .projectContent {
-  text-align: left;
+.projectScroller .projectContent h3 {
+  margin-bottom: 6px;
+}
+
+.projectScroller .projectStats {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .projectScroller::after {
   content: "";
   flex: 0 0 1px;
+}
+
+/* Certificate gallery: maximum 3 cards per row, centered. Only certificate images blur on hover, not the text/card. */
+.certificateSection {
+  overflow: visible;
+  text-align: center;
 }
 
 .certificateGrid {
@@ -1349,17 +1002,111 @@ main { position: relative; }
 }
 
 .certificateTile {
+  position: relative;
+  display: grid;
   flex: 0 1 calc((100% - 48px) / 3);
   max-width: 345px;
   min-width: 280px;
+  gap: 16px;
+  border: 1px solid rgba(23, 32, 51, 0.1);
+  border-radius: 30px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 18px 48px rgba(24, 37, 62, 0.1);
+  backdrop-filter: blur(12px);
   text-align: left;
+  transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.certificateGrid:hover .certificateTile:not(:hover) {
+  transform: scale(0.98);
+}
+
+.certificateGrid:hover .certificateTile:not(:hover) .certificateThumb img {
+  filter: blur(4px) grayscale(0.16);
+  opacity: 0.48;
+  transform: scale(0.98);
+}
+
+.certificateGrid .certificateTile:hover {
+  z-index: 4;
+  transform: translateY(-10px) scale(1.035);
+  border-color: rgba(15, 107, 70, 0.24);
+  box-shadow: 0 34px 90px rgba(24, 37, 62, 0.2);
+}
+
+.certificateGrid .certificateTile:hover .certificateThumb img {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.04);
 }
 
 .certificateThumb {
+  position: relative;
+  display: block;
   width: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(23, 32, 51, 0.12);
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.3);
+}
+
+.certificateThumb::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,.22) 48%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform 650ms ease;
+}
+
+.certificateTile:hover .certificateThumb::after {
+  transform: translateX(120%);
+}
+
+.certificateThumb img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 360ms ease, filter 260ms ease, opacity 260ms ease;
+}
+
+.certificateInfo {
+  padding: 4px 6px 8px;
+}
+
+.certificateInfo h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.certificateInfo p {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.certificateInfo .eyebrow {
+  color: var(--green);
+  margin-bottom: 9px;
 }
 
 @media (max-width: 960px) {
+  .experienceHeader {
+    grid-template-columns: auto 1fr;
+  }
+
+  .experienceMeta {
+    grid-column: 2;
+    justify-items: start;
+    white-space: normal;
+  }
+
+  .experienceHighlights {
+    grid-template-columns: 1fr;
+  }
+
   .certificateTile {
     flex-basis: calc((100% - 24px) / 2);
     max-width: 430px;
@@ -1367,6 +1114,39 @@ main { position: relative; }
 }
 
 @media (max-width: 640px) {
+  html {
+    scroll-padding-top: 96px;
+  }
+
+  .sectionShell {
+    scroll-margin-top: 96px;
+  }
+
+  .experienceCard {
+    padding: 22px;
+    border-radius: 28px;
+  }
+
+  .experienceCard::before {
+    top: 26px;
+    bottom: 26px;
+    left: 45px;
+  }
+
+  .experienceHeader {
+    gap: 14px;
+  }
+
+  .experienceIcon {
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+  }
+
+  .experienceHighlights {
+    gap: 12px;
+  }
+
   .projectSection,
   .certificateSection {
     text-align: left;
@@ -1385,21 +1165,40 @@ main { position: relative; }
   }
 
   .projectScroller .projectCard {
+    flex-basis: 88vw;
     width: 88vw;
     min-width: 88vw;
     max-width: 88vw;
+    padding: 14px;
+  }
+
+  .projectScroller .projectStats {
+    grid-template-columns: 1fr;
   }
 
   .certificateGrid {
-    display: flex;
     justify-content: center;
     margin-top: 24px;
   }
 
   .certificateTile {
     flex-basis: 100%;
-    min-width: 0;
     max-width: 100%;
+    min-width: 0;
+  }
+
+  .certificateGrid:hover .certificateTile:not(:hover) {
+    transform: none;
+  }
+
+  .certificateGrid:hover .certificateTile:not(:hover) .certificateThumb img {
+    filter: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .certificateGrid .certificateTile:hover {
+    transform: translateY(-6px) scale(1.01);
   }
 }
 
