@@ -39,8 +39,8 @@ export default function Home() {
 
         <div className="heroVisual animateIn delayTwo" aria-label="Profile photo">
           <div className="profileGlow" aria-hidden="true" />
-          <div className="orbitBadge orbitOne">API</div>
-          <div className="orbitBadge orbitTwo">DB</div>
+          {/* <div className="orbitBadge orbitOne">API</div>
+          <div className="orbitBadge orbitTwo">DB</div> */}
           <div className="imageFrame mainFrame">
             <Image
               src={profile.heroImage}
@@ -68,8 +68,8 @@ export default function Home() {
               height={1600}
             />
           </div>
-          <div className="aboutBadge aboutBadgeOne">Laravel</div>
-          <div className="aboutBadge aboutBadgeTwo">Clean Code</div>
+          {/* <div className="aboutBadge aboutBadgeOne">Laravel</div>
+          <div className="aboutBadge aboutBadgeTwo">Clean Code</div> */}
           <div className="aboutFocusCard">
             <span>Development style</span>
             <strong>Structured • Practical • Maintainable</strong>
