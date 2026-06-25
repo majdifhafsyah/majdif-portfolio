@@ -106,6 +106,17 @@ export const projects = [
     liveLink: "https://simamin.com/login",
     codeLink: "https://github.com/majdifhafsyah/simamin",
     image: "/images/simamin-login.webp"
+  },
+
+  {
+    title: "NutriChat",
+    subtitle: " Asisten Gaya Hidup Sehat & Nutrisi",
+    description:
+      "A healthy lifestyle and nutrition assistant—chosen because this domain naturally requires multimodal support: users want to send photos of food, health check-up documents, or audio narratives, rather than just text.",
+    tags: ["GEMINI AI", "Prompt Engineering", "API", "Javascript"],
+    liveLink: "https://nutrichat-with-gemini-api.vercel.app/",
+    codeLink: "https://github.com/majdifhafsyah/nutrichat-With-Gemini-API",
+    image: "/images/nutrichat.webp"
   }
 ];
 
